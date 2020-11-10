@@ -1,0 +1,21 @@
+```python
+import random
+a=int(random.random()*50+1)
+```
+
+
+```python
+b="输入的正数"
+i=1
+while i<6:
+    if(a==b):
+        print("正确")
+        elif(a<b):
+            print("大了")
+            else:
+                print("小了")
+                i=i+1
+                break
+else:
+    print("已超过5次")
+```

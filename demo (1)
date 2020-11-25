@@ -1,0 +1,16 @@
+```python
+line_max=0
+line_num=1
+code_in=open(r"C:/Users/86158/demo.py","r").readlines()
+code_out=open("demo_new.py","w")
+```
+
+
+```python
+for i in code_in:
+    if (line_max<len(i)):
+        line_max=len(i)
+for i in code_in:
+    i=i.ljust(line_max+1).replace('\n','')+"#"+str(line_num)+"\n"
+    line_num=line_num+1
+    code_out.write(i)

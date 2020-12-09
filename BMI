@@ -1,0 +1,25 @@
+class bmi:
+    
+    def __init__(self,name,age,weigh,high):
+        self.name=name
+        self.age=age
+        self.weigh=weigh
+        self.high=high
+    def say_hello1(self):
+        a=self.high**2
+        self_bmi=self.weigh/a
+        print("{n}的BMI为{m}".format(n=self.name,m=self_bmi))
+        if self_bmi < 18.5 : 
+            print ("偏瘦")
+        elif self_bmi < 24 :
+            print ("正常")
+        elif self_bmi < 30 :
+            print ("偏胖")
+        elif self_bmi > 30:
+            print ("肥胖")
+name1=input("名字为")
+age1=int(input("年龄是"))
+weigh1=float(input("体重是"))
+high1=float(input("身高为"))
+ps=bmi(name1,age1,weigh1,high1)        
+ps.say_hello1()
